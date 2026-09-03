@@ -13,3 +13,5 @@ venv/
 # Editor
 .vscode/
 .idea/
+
+backend/test_*.pdf

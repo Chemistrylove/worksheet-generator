@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background-color: #f1efe6;
+  background-image: radial-gradient(#d8d3c6 1px, transparent 1px);
+  background-size: 22px 22px;
+  color: #2b2b26;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 72px 24px 48px;
+}
+
+.title-block {
+  margin-bottom: 56px;
+}
+
+.title-block h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+  color: #201f1b;
+}
+
+.title-block .tagline {
+  font-size: 15px;
+  color: #6b675b;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.title-block .rule {
+  border: none;
+  border-top: 2px solid #2f4f3e;
+  width: 56px;
+  margin: 0;
+}
+
+.form-panel {
+  background: #ffffff;
+  border: 1px solid #e3dfd0;
+  border-radius: 6px;
+  padding: 36px 32px;
+  box-shadow: 0 18px 40px -24px rgba(43, 43, 38, 0.35);
+}
+
+.field {
+  display: block;
+  font-size: 13px;
+  color: #6b675b;
+  margin-bottom: 22px;
+}
+
+.field select,
+.field input {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #2b2b26;
+  background: #fdfcfa;
+  border: 1px solid #d3cebd;
+  border-left: 3px solid #d3cebd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-left-color 0.15s ease;
+}
+
+.field select:focus,
+.field input:focus {
+  outline: none;
+  border-left-color: #2f4f3e;
+  background: #ffffff;
+}
+
+.generate-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 10px;
+  background: #2f4f3e;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.generate-button:disabled {
+  background: #a3ada6;
+  cursor: default;
+}
+
+.generate-button:hover:not(:disabled) {
+  background: #253f31;
+}
+
+.generate-button:focus-visible {
+  outline: 2px solid #2f4f3e;
+  outline-offset: 2px;
+}
+
+.error-message {
+  color: #b33a3a;
+  font-size: 14px;
+  margin: 20px 0 0;
+  padding-left: 12px;
+  border-left: 3px solid #b33a3a;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 48px;
+  }
+
+  .title-block h1 {
+    font-size: 30px;
+  }
+
+  .form-panel {
+    padding: 28px 22px;
+  }
+}
