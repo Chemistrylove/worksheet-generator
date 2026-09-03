@@ -13,15 +13,18 @@ from app.pdf.builder import build_worksheet_pdf, build_answer_key_pdf
 
 from fastapi.middleware.cors import CORSMiddleware
 
+import os
+
 app = FastAPI(title="Worksheet Generator API")
+
+FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[FRONTEND_URL],
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 GENERATORS = {
     "linear_equation": generate_linear_equation,
