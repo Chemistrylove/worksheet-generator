@@ -1,57 +1,62 @@
 body {
   margin: 0;
-  background-color: #f1efe6;
-  background-image: radial-gradient(#d8d3c6 1px, transparent 1px);
-  background-size: 22px 22px;
-  color: #2b2b26;
+  background-color: #f4efe4;
+  background-image: radial-gradient(#e2dbc9 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #2a2e29;
   min-height: 100vh;
 }
 
 .page {
-  max-width: 440px;
+  max-width: 460px;
   margin: 0 auto;
   padding: 72px 24px 48px;
 }
 
 .title-block {
-  margin-bottom: 56px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.title-block .eyebrow-tab {
+  display: inline-block;
+  background: #c17a54;
+  color: #fffdf8;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 16px;
 }
 
 .title-block h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 400;
   letter-spacing: -0.01em;
-  margin: 0 0 14px;
-  color: #201f1b;
+  margin: 0 0 12px;
+  color: #1c231e;
 }
 
 .title-block .tagline {
   font-size: 15px;
-  color: #6b675b;
-  margin: 0 0 16px;
-  line-height: 1.5;
-}
-
-.title-block .rule {
-  border: none;
-  border-top: 2px solid #2f4f3e;
-  width: 56px;
+  color: #6e7568;
   margin: 0;
+  line-height: 1.5;
+  max-width: 34ch;
 }
 
 .form-panel {
-  background: #ffffff;
-  border: 1px solid #e3dfd0;
-  border-radius: 6px;
+  background: #fffdf8;
+  border: 1px solid #e2dbc9;
+  border-radius: 8px;
   padding: 36px 32px;
-  box-shadow: 0 18px 40px -24px rgba(43, 43, 38, 0.35);
+  box-shadow: 0 24px 48px -28px rgba(38, 57, 46, 0.35);
 }
 
 .field {
   display: block;
   font-size: 13px;
-  color: #6b675b;
+  color: #6e7568;
   margin-bottom: 22px;
 }
 
@@ -62,34 +67,34 @@ body {
   margin-top: 7px;
   padding: 10px 12px;
   font-size: 15px;
-  color: #2b2b26;
-  background: #fdfcfa;
-  border: 1px solid #d3cebd;
-  border-left: 3px solid #d3cebd;
-  border-radius: 3px;
+  color: #2a2e29;
+  background: #f9f6ef;
+  border: 1px solid #dcd5c5;
+  border-radius: 4px;
   box-sizing: border-box;
   font-family: inherit;
-  transition: border-left-color 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .field select:focus,
 .field input:focus {
   outline: none;
-  border-left-color: #2f4f3e;
+  border-color: #26392e;
   background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(38, 57, 46, 0.1);
 }
 
 .generate-button {
   width: 100%;
   padding: 13px;
   margin-top: 10px;
-  background: #2f4f3e;
-  color: #ffffff;
+  background: #26392e;
+  color: #fffdf8;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 15px;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
 .generate-button:disabled {
@@ -98,20 +103,24 @@ body {
 }
 
 .generate-button:hover:not(:disabled) {
-  background: #253f31;
+  background: #1c2b22;
+}
+
+.generate-button:active:not(:disabled) {
+  transform: translateY(1px);
 }
 
 .generate-button:focus-visible {
-  outline: 2px solid #2f4f3e;
+  outline: 2px solid #c17a54;
   outline-offset: 2px;
 }
 
 .error-message {
-  color: #b33a3a;
+  color: #a6432e;
   font-size: 14px;
   margin: 20px 0 0;
   padding-left: 12px;
-  border-left: 3px solid #b33a3a;
+  border-left: 3px solid #a6432e;
 }
 
 @media (max-width: 480px) {
@@ -120,7 +129,7 @@ body {
   }
 
   .title-block h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .form-panel {

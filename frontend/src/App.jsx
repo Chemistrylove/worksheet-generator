@@ -47,9 +47,9 @@ function App() {
   return (
     <div className="page">
       <div className="title-block">
+        <span className="eyebrow-tab">Mathematics</span>
         <h1>Worksheet Generator</h1>
         <p className="tagline">Math worksheets and answer keys, ready to print.</p>
-        <hr className="rule" />
       </div>
 
       <div className="form-panel">
