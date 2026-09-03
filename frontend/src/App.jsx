@@ -20,8 +20,8 @@ function App() {
     setIsLoading(true);
     setErrorMessage(null);
 
-    const url = `http://127.0.0.1:8000/worksheet?question_type=${questionType}&difficulty=${difficulty}&count=${count}`;
-
+const API_URL = import.meta.env.VITE_API_URL;
+const url = `${API_URL}/worksheet?question_type=${questionType}&difficulty=${difficulty}&count=${count}`;    
     try {
       const response = await fetch(url);
 
